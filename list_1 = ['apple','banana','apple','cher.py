@@ -1,10 +1,11 @@
-orignal_list = ['apple','banana','apple','orange','banana']
-seen = set()
-unique_items = []
-for item in orignal_list:
-    if item not in seen:
-        seen.add(item)
-        unique_items.append(item)
-print(unique_items)
-    
-    
+sentense = input("Enter a sentense: ")
+sentense_1= sentense.split()
+frequency_count_of_each_word = {}
+for word in sentense_1:
+    if word in frequency_count_of_each_word:
+        frequency_count_of_each_word[word] += 1
+    else:
+        frequency_count_of_each_word[word] = 1
+print(frequency_count_of_each_word)
+
+
