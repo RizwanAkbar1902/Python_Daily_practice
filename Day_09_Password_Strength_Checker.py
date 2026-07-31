@@ -15,6 +15,7 @@ for char in password:
         has_lower = True
     elif char.isdigit():
         has_digit = True
+        
 
 if (
     8 <= len(password) <= 20
