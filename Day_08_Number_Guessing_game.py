@@ -63,13 +63,21 @@ def play_game():
 def main():
     while True:
         play_game()
-        play_again = (
-            input("\nDo you want to play again? (yes/no): ").strip().lower()
-        )
-        if play_again not in ["yes", "y"]:
-            print("\nThanks for playing! Goodbye 👋")
-            break
 
+        while True:
+            play_again = (
+                input("\nDo you want to play again? (yes/no): ")
+                .strip()
+                .lower()
+            )
+
+            if play_again in ["yes", "y"]:
+                break
+            elif play_again in ["no", "n"]:
+                print("\nThanks for playing! Goodbye 👋")
+                return
+            else:
+                print("[ERROR] Invalid choice! Please enter yes or no.")
 
 if __name__ == "__main__":
     main()
