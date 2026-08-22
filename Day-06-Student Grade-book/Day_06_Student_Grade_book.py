@@ -1,3 +1,6 @@
+# Student Grade Book Manager
+# Author: Rizwan Akbar
+
 student = {"Samreen": 95, "Rizwan": 79, "Usman": 89, "Ambreen": 99}
 
 choice = 0
@@ -30,22 +33,33 @@ while choice != 4:
             print()
         else:
             print("\nStudent not found!\n")
+            print("=" * 50)
+            print()
 
     elif choice == 2:
         new_student = input("Enter a new student: ").strip().capitalize()
         
+        if not new_student:
+            print("Name cannot be empty!\n")
+            continue
+
         # Check if student already exists
         if new_student in student:
             print(f"Note: {new_student} already exists. Updating grade...")
 
-        new_grade = int(input("Enter new grade: "))
-        student[new_student] = new_grade
-        print("Student added/updated successfully!")
+        grade_input = input("Enter new grade (0-100): ").strip()
+        if grade_input.isdigit():
+            new_grade = int(grade_input)
+            student[new_student] = new_grade
+            print("Student added/updated successfully!")
+        else:
+            print("Invalid grade! Please enter numbers only.")
+
         print("=" * 50)
         print()
 
     elif choice == 3:
-        print("\nThis is the record of all Students:\n")
+        print(f"\nThis is the record of all Students (Total: {len(student)}):\n")
         for name, grade in student.items():
             print(f"{name}: {grade}")
         print("=" * 50)
