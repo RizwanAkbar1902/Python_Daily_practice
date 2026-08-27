@@ -4,10 +4,11 @@ Day 11: BMI Health Analyzer
 Author: Rizwan Akbar
 
 Description:
-This program calculates the Body Mass Index (BMI)
-using the user's height and weight. It then classifies
-the BMI into different health categories and displays
-a health suggestion.
+A simple health metric tool that computes the user's 
+Body Mass Index (BMI) from their weight and height.
+It evaluates the resulting score against standard
+health ranges to provide a categorized classification
+along with practical lifestyle suggestions.
 
 Concepts Used:
 - User Input
