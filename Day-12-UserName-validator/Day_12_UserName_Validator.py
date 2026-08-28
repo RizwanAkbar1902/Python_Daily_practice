@@ -13,22 +13,23 @@ Concepts Used:
 - Strings
 - Conditional Statements
 - String Methods
-- Loops
 """
 
 print("=" * 50)
-print("          USERNAME VALIDATOR")
+print("              USERNAME VALIDATOR")
 print("=" * 50)
 
 username = input("Enter a username: ").strip()
 
-if len(username) < 5 or len(username) > 15:
-    print("❌ Username must be between 5 and 15 characters.")
+if not username:
+    print("[ERROR] Username cannot be empty.")
+elif len(username) < 5 or len(username) > 15:
+    print("[ERROR] Username must be between 5 and 15 characters.")
 elif not username[0].isalpha():
-    print("❌ Username must start with a letter.")
+    print("[ERROR] Username must start with an alphabet letter.")
 elif " " in username:
-    print("❌ Username must not contain spaces.")
+    print("[ERROR] Username must not contain spaces.")
 elif not username.replace("_", "").isalnum():
-    print("❌ Username can only contain letters, numbers, and underscores (_).")
+    print("[ERROR] Username can only contain letters, numbers, and underscores (_).")
 else:
-    print("✅ Username is valid.")
+    print(f"[SUCCESS] '{username}' is a valid username.")
