@@ -1,19 +1,28 @@
 # Python OOP Basics (Class & Instance Methods)
 
-This module demonstrates foundational Object-Oriented Programming (OOP) concepts in Python through two practical, beginner-friendly implementations: a Mobile Phone manager and a Car Fuel simulator.
+This module demonstrates fundamental Object-Oriented Programming (OOP) concepts in Python through three practical, beginner-friendly implementations: Mobile Phone manager, Car Fuel simulator, and Bank Account manager.
 
 ---
 
 ## 1. Mobile Phone Class (`mobile.py`)
-Simulates a real-world smartphone with battery management.
+Simulates battery usage and recharging mechanics.
+- Attributes: `brand`, `model`, `battery`
+- Methods: `make_call()`, `charge()`, `show_info()`
 
-### Features
-- State tracking for `brand`, `model`, and `battery`.
-- Methods:
-  - `make_call(minutes)`: Consumes battery based on call duration.
-  - `charge(amount)`: Recharges battery up to 100%.
-  - `show_info()`: Displays current device specs.
+## 2. Car Simulator (`car.py`)
+Simulates fuel consumption and refueling logic.
+- Attributes: `brand`, `model`, `fuel`
+- Methods: `drive()`, `refuel()`, `show_dashboard()`
 
-### Running the Script
-```bash
-python mobile.py
+## 3. Bank Account Manager (`bank_account.py`)
+Simulates simple deposits, withdrawals, and balance verification.
+- Attributes: `account_holder`, `balance`
+- Methods: `deposit()`, `withdraw()`, `check_balance()`
+
+---
+
+## Core OOP Concepts Covered
+- Class definition using `class`
+- Object initialization with `__init__` constructor
+- Using `self` for instance-level state tracking
+- Validating state transitions inside methods
